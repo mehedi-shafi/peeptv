@@ -31,7 +31,7 @@ class tvscraper():
         try:
             response = request.urlopen(req)
             print('Successfully fetched response.')
-            print(response)
+            print(response.read())
             soup = Soup(response, 'html.parser')
             print(f'Parsed soup size: {len(soup)}')
             streamlink = bsoup.findAll("script")[15].next_element.split(" file: ")[1].split(',')[0].strip("\'")
