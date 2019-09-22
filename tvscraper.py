@@ -1,6 +1,5 @@
 from urllib import request
 from bs4 import BeautifulSoup as Soup
-import vlc
 import time
 import os
 from threading import Thread
