@@ -33,7 +33,7 @@ class tvscraper():
             print('Successfully fetched response.')
             soup = Soup(response, 'html.parser')
             print(f'Parsed soup size: {len(soup)}')
-            streamlink = bsoup.findAll("script")[15].next_element.split(" file: ")[1].split(',')[0].strip("\'")
+            streamlink = soup.findAll("script")[15].next_element.split(" file: ")[1].split(',')[0].strip("\'")
             return {'code': 200, 'msg': streamlink}
         except Exception as ex:
             print(ex)
