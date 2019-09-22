@@ -37,4 +37,4 @@ class tvscraper():
             streamlink = bsoup.findAll("script")[15].next_element.split(" file: ")[1].split(',')[0].strip("\'")
             return {'code': 200, 'msg': streamlink}
         except:
-            return {'code': 403, 'msg': 'Internal error occured', 'response': response.read()}
+            return {'code': 403, 'msg': 'Internal error occured', 'response': response.read().decode('utf-8')}
