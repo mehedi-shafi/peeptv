@@ -11,6 +11,9 @@ class tvscraper():
     def __init__(self):
         self.channel_dict = self.get_channels()
         self.agents = UserAgent()
+
+    def get_channels_dict(self):
+        return self.channel_dict
     
     def get_channels(self, channelpath='channels.json'):
         assert os.path.exists(channelpath), "No channel configuration file path exists"
