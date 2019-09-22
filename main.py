@@ -12,7 +12,7 @@ def get_channel_stream_link(channel_name):
     stream_link = tvbox.get_stream_link(channel_name)
     return jsonify(stream_link)
 
-@app.route('/channel_list', methods=['GET'])
+@app.route('/channel-list', methods=['GET'])
 def get_channel_list():
     return jsonify(tvbox.get_channels_dict())
 
